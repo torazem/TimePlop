@@ -1,0 +1,40 @@
+[project]
+name = "timeplop"
+version = "2.1.2"
+authors = [
+    {name = "Ashton Hudson"},
+    {name = "Duane Churms"},
+]
+maintainers = [
+    {name = "Tracy Semmelink", email = "tracy@dataprophet.com"},
+]
+description = "A Toggl CSV exporter"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "setuptools",
+    "google-api-python-client==1.8.2",
+    "google-auth-oauthlib==0.4.1",
+    "typer==0.3.2",
+    "toml==0.10.0",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "mypy==0.770",
+    "pytest==6.1.2",
+]
+
+[project.scripts]
+timewriggler = "timewriggler.__main__:app"
+
